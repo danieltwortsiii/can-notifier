@@ -65,7 +65,7 @@ async function sendSMS(phoneNumbers, errorMessage, controlName) {
         });
 
         const from = process.env['SINCH_FROM_NUMBER'];
-        const body = `Alert: ${controlName}\nError: ${errorMessage}\n${new Date().toLocaleString()}`;
+        const body = `Alert: ${controlName}\nError: ${errorMessage}\n`;
 
         const requestData = {
             sendSMSRequestBody: {
